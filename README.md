@@ -8,7 +8,11 @@ Stranica je izrađena korištenjem tehnologija HTML, CSS, JavaScript i Bootstrap
 ## **Tehnologije**
 - HTML
 - CSS
-- JavaScript  <br>
+- JavaScript
+<br>
+
+## **Pregled projekta**
+Projekt možete pogledati ovdje: https://kgotal23.github.io/web-stranica-AI-alati/
 
 ## **Autor**
 Klara Gotal
