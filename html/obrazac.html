@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="autor" content="Klara Gotal">
+  <meta name="ključne_riječi" content="umjetna inteligencija, AI alati, Gemini, ChatGPT, Claude">
+  <meta name="fakultet" content="Fakultet Organizacije i Informatike">
+  <meta name="godina studija" content="2024/2025">
+  <meta name="predmet" content="Osnove Web Tehnologije">
+  <meta name="jezici" content="HTML, CSS">
+  <link rel="stylesheet" href="../css/kgotal23.css" />
+  <script src="../js/kgotal23.js"></script>
+  <title>Prijava kibernetičkog incidenta</title>
+</head>
+<body>
+  <header>
+    <a href="../index.html"><img src="../resursi/slike/LOGO.png" height="65" alt="LOGO_ikona"></a>
+    <h1>Prijavite kibernetički incident</h1>
+  </header>
+
+  <nav class="navigacija">
+    <a href="../index.html" class="nav-gumb nav-tekst">Home</a>
+    <a href="autor.html" class="nav-gumb nav-tekst">Autor</a>
+    <a href="dokumentacija.html" class="nav-gumb nav-tekst">Dokumentacija</a>   
+    <a href="obrazac.html" class="nav-gumb aktivna-navigacija nav-tekst">Obrazac</a>
+    <a href="usporedba_AI_alata.html" class="nav-gumb nav-tekst">Usporedba AI alata</a>
+  </nav>
+
+  <main>
+    <div class="kontejner-formulara" style="width: 70%; max-width: 1000px; margin: 0 auto;">
+      <form id="form" action="https://spider.foi.hr/OWT/materijali/ispis_forme.php" method="post" class="formular responzivni-formular" style="width: 100% !important; max-width: 100% !important;">
+        
+        <fieldset class="form-grupa">
+          <legend class="form-naslov">Podaci o prijavitelju</legend>
+
+          <label for="ime">Ime:</label>
+          <input type="text" name="ime" id="ime" required><br><br>
+
+          <label for="prezime">Prezime:</label>
+          <input type="text" name="prezime" id="prezime" required><br><br>
+
+          <label for="email">Email adresa:</label>
+          <input type="email" name="email" id="email" required><br><br>
+
+          <label for="tel">Kontakt telefon:</label>
+          <input type="tel" name="tel" id="tel"><br><br>
+
+          <label for="organizacija">Naziv organizacije:</label>
+          <input type="text" name="organizacija" id="organizacija"><br><br>
+
+          <label for="oib">OIB organizacije:</label>
+          <input type="number" name="oib" id="oib"><br><br>
+
+          <label for="web">Web stranica organizacije:</label>
+          <input type="url" name="web" id="web" placeholder="https://example.com"><br><br>
+        </fieldset>
+
+        <fieldset class="form-grupa">
+          <legend class="form-naslov">Podaci o incidentu</legend>
+
+          <label for="tip_incidenta">Tip incidenta:</label>
+          <select name="tip_incidenta" id="tip_incidenta" required>
+            <option value="" disabled selected>-- Odaberite tip incidenta --</option>
+            <option value="phishing">Phishing</option>
+            <option value="malware">Malware</option>
+            <option value="ransomware">Ransomware</option>
+            <option value="ddos">DDoS napad</option>
+            <option value="data_breach">Curenje podataka</option>
+            <option value="unauthorized_access">Neovlašteni pristup</option>
+            <option value="social_engineering">Socijalni inženjering</option>
+            <option value="drugo">Drugo</option>
+          </select><br><br>
+
+          <label for="datum_incident">Datum incidenta:</label>
+          <input type="date" name="datum_incident" id="datum_incident" required><br><br>
+
+          <label for="vrijeme_incident">Vrijeme incidenta:</label>
+          <input type="time" name="vrijeme_incident" id="vrijeme_incident"><br><br>
+
+          <label for="mjesec_incident">Mjesec kada je primjećen problem:</label>
+          <input type="month" name="mjesec_incident" id="mjesec_incident"><br><br>
+
+          <label for="tjedan_incident">Tjedan kada je primjećen problem:</label>
+          <input type="week" name="tjedan_incident" id="tjedan_incident"><br><br>
+
+          <label for="opis_incidenta">Detaljan opis incidenta:</label><br>
+          <textarea name="opis_incidenta" id="opis_incidenta" rows="5" cols="50" placeholder="Opišite detaljno što se dogodilo" required></textarea><br><br>
+
+          <label for="intenzitet">Procijenjeni intenzitet napada (1-10):</label>
+          <input type="range" name="intenzitet" id="intenzitet" min="1" max="10" step="1"><br><br>
+
+          <label for="lokacija">Geografska lokacija:</label>
+          <input type="text" name="lokacija" id="lokacija" placeholder="Grad, država"><br><br>
+
+          <label>Prijavljeno drugim institucijama:</label><br>
+          <input type="checkbox" name="prijavljeno[]" id="prijavljeno_policija" value="policija">
+          <label for="prijavljeno_policija">Policija</label><br>
+          <input type="checkbox" name="prijavljeno[]" id="prijavljeno_cert" value="cert">
+          <label for="prijavljeno_cert">CERT</label><br>
+          <input type="checkbox" name="prijavljeno[]" id="prijavljeno_azop" value="azop">
+          <label for="prijavljeno_azop">AZOP</label><br><br>
+
+          <label>Je li incident još uvijek aktivan?</label><br>
+          <input type="radio" name="aktivan" id="aktivan-da" value="da" required>
+          <label for="aktivan-da">Da</label>
+          <input type="radio" name="aktivan" id="aktivan-ne" value="ne">
+          <label for="aktivan-ne">Ne</label>
+          <input type="radio" name="aktivan" id="aktivan-nepoznato" value="nepoznato">
+          <label for="aktivan-nepoznato">Nije poznato</label><br><br>
+        </fieldset>
+        <fieldset class="form-grupa">
+          <legend class="form-naslov">Tehnički podaci</legend>
+
+          <label for="ip_adresa">IP adresa izvora (ako je poznata):</label>
+          <input type="text" name="ip_adresa" id="ip_adresa" pattern="^([0-9]{1,3}\.){3}[0-9]{1,3}$" placeholder="npr. 192.168.1.1"><br><br>
+
+          <label for="url_maliciozni">URL malicioznog sadržaja:</label>
+          <input type="url" name="url_maliciozni" id="url_maliciozni"><br><br>
+
+          <label for="datoteka">Priložite sliku ili screenshot incidenta:</label>
+          <input type="file" name="datoteka" id="datoteka" accept="image/*"><br><br>
+
+          <label for="lozinka">Postavite lozinku za pristup izvještaju:</label>
+          <input type="password" name="lozinka" id="lozinka" minlength="8"><br><br>
+
+          <label for="boja">Označite ozbiljnost incidenta bojom:</label>
+          <input type="color" name="boja" id="boja" value="#ff0000"><br><br>
+
+          <input type="hidden" name="verzija_forme" value="1.2.3">
+        </fieldset>
+
+        <input type="submit" value="Pošalji prijavu">
+        <input type="reset" value="Poništi unos">
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-sadrzaj">
+      <p>Klara Gotal &copy; 2025</p>
+      <div class="ai-ikone">
+        <a href="https://gemini.google.com/" target="_blank" title="Gemini">
+          <img src="../resursi/slike/GEMINI_3.png" alt="Gemini" class="ikona-podnozja">
+        </a>
+        <a href="https://chat.openai.com/" target="_blank" title="ChatGPT">
+          <img src="../resursi/slike/CHAT_GPT_2.png" alt="ChatGPT" class="ikona-podnozja">
+        </a>
+        <a href="https://claude.ai/" target="_blank" title="Claude">
+          <img src="../resursi/slike/CLAUDE_3.png" alt="Claude" class="ikona-podnozja">
+        </a>
+      </div>
+      <a href="http://validator.w3.org/check?uri=https://spider.foi.hr/OWT/2025/zadaca_01/kgotal23/html/obrazac.html">
+        <img src="../resursi/slike/HTML_5_ikona.png" class="slika-html" alt="HTML validator" />
+      </a>
+    </div>
+  </footer>
+</body>
+</html>

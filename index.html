@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="autor" content="Klara Gotal">
+    <meta name="ključne_riječi" content="umjetna inteligencija, AI alati, Gemini, ChatGPT, Claude">
+    <meta name="fakultet" content="Fakultet Organizacije i Informatike">
+    <meta name="godina studija" content="2024/2025">
+    <meta name="predmet" content="Osnove Web Tehnologije">
+    <meta name="jezici" content="HTML, CSS">
+    <link rel="stylesheet" href="./css/kgotal23.css" />
+    <script src="./js/kgotal23.js"></script>
+    <title>Početna</title>
+</head>
+<body>
+  <header>
+    <a href="index.html"><img src="./resursi/slike/LOGO.png" height="65" alt="LOGO_ikona"></a>
+    <h1>Početna stranica</h1>
+  </header>
+  <nav class="navigacija">
+    <a href="index.html" class="nav-gumb aktivna-navigacija nav-tekst">Home</a>
+    <a href="./html/autor.html" class="nav-gumb nav-tekst">Autor</a>
+    <a href="./html/dokumentacija.html" class="nav-gumb nav-tekst">Dokumentacija</a>   
+    <a href="./html/obrazac.html" class="nav-gumb nav-tekst">Obrazac</a>
+    <a href="./html/usporedba_AI_alata.html" class="nav-gumb nav-tekst">Usporedba AI alata</a>
+  </nav>
+
+    <main>
+      <h2>Pregled AI Alata</h2>
+
+    <div class="karusel">
+      <input type="radio" name="karusel-radio" id="karusel-slajd1" checked>
+      <input type="radio" name="karusel-radio" id="karusel-slajd2">
+      <input type="radio" name="karusel-radio" id="karusel-slajd3">
+      
+
+      <div class="karusel-gumbi">
+        <label for="karusel-slajd3" class="karusel-gumb karusel-gumb-prethodni slajd1-kontrole">&#10094;</label>
+        <label for="karusel-slajd2" class="karusel-gumb karusel-gumb-sljedeci slajd1-kontrole">&#10095;</label>
+        
+        <label for="karusel-slajd1" class="karusel-gumb karusel-gumb-prethodni slajd2-kontrole">&#10094;</label>
+        <label for="karusel-slajd3" class="karusel-gumb karusel-gumb-sljedeci slajd2-kontrole">&#10095;</label>
+        
+        <label for="karusel-slajd2" class="karusel-gumb karusel-gumb-prethodni slajd3-kontrole">&#10094;</label>
+        <label for="karusel-slajd1" class="karusel-gumb karusel-gumb-sljedeci slajd3-kontrole">&#10095;</label>
+      </div>
+      
+      <div class="karusel-indikatori">
+        <label for="karusel-slajd1" class="karusel-indikator aktivan"></label>
+        <label for="karusel-slajd2" class="karusel-indikator"></label>
+        <label for="karusel-slajd3" class="karusel-indikator"></label>
+      </div>
+      <div class="karusel-sadrzaj">
+        <div class="karusel-slajd trenutan" id="slajd1">
+          <img src="./resursi/slike/GEMINI.png" alt="Gemini AI">
+          <div class="karusel-info">
+            <h2>Google Gemini</h2>
+            <p>Multimodalni AI model s naprednim mogućnostima razumijevanja teksta, slika i koda</p>
+            <a href="./html/stranica_detalja.html#gemini-section" target="_blank">Saznaj više</a>
+          </div>
+        </div>
+        
+        <div class="karusel-slajd desno" id="slajd2">
+          <img src="./resursi/slike/CHAT_GPT_3.png" alt="ChatGPT AI">
+          <div class="karusel-info">
+            <h2>ChatGPT</h2>
+            <p>Popularni konverzacijski AI model s naprednim razumijevanjem jezika i generiranjem teksta</p>
+            <a href="./html/stranica_detalja.html#deepseek-section" target="_blank">Saznaj više</a>
+          </div>
+        </div>
+        
+        <div class="karusel-slajd lijevo" id="slajd3">
+          <img src="./resursi/slike/CLAUDE_2.png" alt="Claude AI">
+          <div class="karusel-info">
+            <h2>Anthropic Claude</h2>
+            <p>Konverzacijski AI fokusiran na sigurnost i korisnost s dugim kontekstualnim prozorom</p>
+            <a href="./html/stranica_detalja.html#claude-section" target="_blank">Saznaj više</a>
+          </div>
+        </div>
+      </div>
+    </div>
+      <p class="glavni-paragraf">
+        U današnje vrijeme postoji niz naprednih AI alata koji se međusobno razlikuju po mogućnostima i specijalizacijama. Na ovoj stranici prikazana je usporedba tri trenutno najistaknutija sustava: <span class="istaknuti-tekst">Google Gemini, OpenAI ChatGPT i Anthropic Claude</span>. Svaki od njih ima svoje prednosti kada je riječ o razumijevanju teksta, obradi slika i programiranju. 
+        Google Gemini ističe se po iznimno snažnoj obradi slika i visokom stupnju razumijevanja jezika, što ga čini odličnim izborom za multimodalne zadatke.
+        OpenAI ChatGPT je svestran alat poznat po prirodnom razgovoru i kvalitetnoj podršci za kodiranje, idealan za kreativan i analitički rad.
+        Anthropic Claude nudi stabilne i sigurnosno usmjerene odgovore, s velikim naglaskom na razumijevanje konteksta i korisničku etiku.
+        Ova usporedba omogućuje korisnicima lakši odabir alata koji najbolje odgovara njihovim potrebama – bilo da se radi o učenju, profesionalnoj primjeni ili istraživanju.
+        <footer class="napomena">
+          <small>Tekst generiran pomoću Claude 3.7. Prompt: "Napiši sažet i informativan tekst koji uspoređuje najpoznatije alate umjetne inteligencije kao što su Google Gemini, OpenAI ChatGPT i Anthropic Claude. Usporedba treba uključivati njihove prednosti u razumijevanju teksta, obradi slika i programiranju. Stil neka bude jasan i prikladan za čitatelje koji žele brzo razumjeti razlike i odabrati alat prema svojim potrebama."</small>
+        </footer>
+        
+    <p class="glavni-paragraf">
+      Umjetna inteligencija danas igra ključnu ulogu u oblikovanju digitalne budućnosti. Njezina moć proizlazi iz sposobnosti da brzo analizira ogromne količine informacija, otkrije obrasce i donosi inteligentne odluke u stvarnom vremenu. AI alati, poput generativnih modela ChatGPT-a i Google Geminija, omogućuju stvaranje sadržaja, uključujući tekst i slike, dok specijalizirani sustavi pomažu u preciznoj dijagnostici, optimizaciji prometa i prilagođenom učenju. Njihova primjena sve je šira – od sustava preporuka i chatbotova do prepoznavanja glasa i vizualnih elemenata, kao i složenih prediktivnih modela u sektorima poput financija, maloprodaje i logistike. Iako koristi umjetne inteligencije postaju sve očitije, važno je istovremeno razmatrati pitanja etike, privatnosti i sigurnosti. <span class="istaknuti-tekst-alt">Bez obzira na izazove, AI nastavlja napredovati velikom brzinom, potičući inovacije koje oblikuju naš svakodnevni život i način razmišljanja.</span>
+      <footer class="napomena">
+        <small>Tekst generiran pomoću ChatGPT-a. Prompt: "Napiši informativan tekst o ulozi umjetne inteligencije u suvremenom društvu, s naglaskom na njezine primjene u različitim industrijama, njezinu sposobnost analize podataka i donošenja odluka, kao i etičke izazove koje donosi njezin razvoj. Stil neka bude ozbiljan, moderan i razumljiv široj publici."</small>
+      </footer>
+  
+    <h3 id="ai-pitanja">Pitanja o umjetnoj inteligenciji</h3>
+    <table class="ai-tablica">
+      <thead>
+        <tr>
+          <th>Pitanje</th>
+          <th>Odgovor</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Koje su razlike između Gemini, ChatGPT i Claude AI alata?</td>
+          <td>
+            Gemini odlikuje multimodalna sposobnost koja integrira tekst, slike i zvuk. ChatGPT je poznat po razumijevanju i generiranju 
+            prirodnog jezika i rješavanju širokog spektra zadataka. Claude se ističe dugim kontekstualnim prozorom i fokusiranjem na sigurnost i etiku u generiranim odgovorima.
+          </td>
+        </tr>
+        <tr>
+          <td>Koje su prednosti korištenja različitih AI alata?</td>
+          <td>
+            Korištenje različitih AI alata omogućuje optimizaciju za specifične zadatke - Gemini za multimedijalne sadržaje, ChatGPT za kreativne i različite zadatke, 
+            Claude za dugačke dokumente. Svaki alat ima svoje jedinstvene prednosti koje se mogu koristiti za različite primjene.
+          </td>
+        </tr>
+        <tr>
+          <td>Kako odabrati pravi AI alat za svoje potrebe?</td>
+          <td>
+            Odabir ovisi o specifičnim potrebama: za svakodnevne razgovore i kreativne zadatke, ChatGPT je odlična opcija; za kreativne zadatke s 
+            više tipova medija, Gemini je dobar izbor; za detaljnu analizu dugačkih tekstova i etički sigurnije odgovore, Claude pruža najbolje rezultate.
+          </td>
+        </tr>
+        <tr>
+          <td>Kakve su mogućnosti integracije ovih AI alata?</td>
+          <td>
+            Svi navedeni alati nude API pristup za integraciju u vlastite aplikacije i servise. Gemini i Claude imaju robusne API-je za 
+            različite platforme, dok ChatGPT ima dobro dokumentirani API koji koriste milijuni developera širom svijeta.
+          </td>
+        </tr>
+        <tr>
+          <td>Koji su trendovi razvoja ovih AI alata?</td>
+          <td>
+            Trendovi uključuju veće kontekstualne prozore za pamćenje informacija, bolju multimodalnu sposobnost (rad s tekstom, slikama, audio i video), 
+            napredniju logiku rasuđivanja i specijalizaciju za specifične domene poput programiranja, medicine ili obrazovanja.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    
+<details open id="sklopivi-gemini">
+  <summary>Google Gemini - mogućnosti i primjene</summary>
+  <div class="detalji-sadrzaj">
+    <p>
+      Google Gemini dolazi u tri verzije: Ultra, Pro i Nano. Najveći model, Gemini Ultra, nadmašio je ljudske stručnjake na masivnom multidisciplinarnom testu sposobnosti (MMLU), 
+      postižući rezultat od 90.0%. Gemini je multimodalan, što znači da može razumjeti i raditi s različitim vrstama informacija - tekst, slike, audio, video i kod. Ova svestranost
+      čini ga idealnim za kreativne projekte, analizu podataka i svakodnevne zadatke koji kombiniraju različite formate.
+    </p>
+  </div>
+</details>
+
+<details>
+  <summary>ChatGPT - svestrani konverzacijski asistent</summary>
+  <div class="detalji-sadrzaj">
+    <p>
+      ChatGPT je konverzacijski AI model razvijen od strane OpenAI-a koji je postao poznat po svojoj sposobnosti razumijevanja i generiranja prirodnog jezika. Može odgovarati na 
+      pitanja, pisati kreativne tekstove, pomoći u programiranju, prevođenju, i rezoniranju. ChatGPT je treniran na ogromnoj količini teksta s interneta, što mu daje široko 
+      znanje o raznim temama. Najnovije verzije poput GPT-4 imaju poboljšane sposobnosti rasuđivanja, mogu analizirati slike i imaju kontekstualni prozor od 128,000 tokena 
+      (oko 100,000 riječi), što omogućuje detaljnu analizu dugačkih tekstova i složene razgovore.
+    </p>
+  </div>
+</details>
+
+<details>
+  <summary>Claude - fokus na sigurnost i dugi kontekst</summary>
+  <div class="detalji-sadrzaj">
+    <p>
+      Anthropic Claude se ističe po svom fokusu na sigurnost, korisnost i smanjenje štetnog ponašanja AI sustava. Claude ima sposobnost razumijevanja i obrade do 100,000 tokena 
+      (otprilike 75,000 riječi) u jednom upitu, što ga čini idealnim za analizu dugih dokumenata, knjiga ili detaljnih istraživanja. Claude je također treniran da bude "ustavni AI", 
+      što znači da slijedi specifični skup principa dizajniranih za etičke i sigurne interakcije, posebno za osjetljive teme.
+    </p>
+  </div>
+</details>
+
+<details>
+  <summary>Usporedba performansi AI alata</summary>
+  <div class="detalji-sadrzaj">
+    <p>
+      Svaki od ovih alata ima različite prednosti ovisno o zadatku. U benchmarku GSM8K (matematičko rezoniranje), Gemini Ultra postiže 94.4%, dok Claude 2 postiže 88.0%. 
+      Za svakodnevnu upotrebu, ChatGPT je popularan zbog svoje pristupačnosti i svestranosti. Za razumijevanje prirodnog jezika, Claude pruža dublje i nijansirane odgovore, posebno za 
+      dugačke kontekste. Gemini ima najbolje sposobnosti u radu s slikama i drugim medijima. Ovi alati se konstantno unapređuju, pa se i njihove relativne prednosti mijenjaju.
+    </p>
+  </div>
+</details>
+
+<details>
+  <summary>Budućnost AI alata</summary>
+  <div class="detalji-sadrzaj">
+    <p>
+      U bliskoj budućnosti, očekuje se da će ovi AI alati razviti još bolje mogućnosti rezoniranja, veće razumijevanje konteksta i sposobnost rješavanja složenijih problema. 
+      Također, naglasak će biti na boljoj integraciji s drugim sustavima i alatima, smanjenju energetskih potreba i pristupačnosti za širi krug korisnika. Ključni izazov 
+      ostaje balansiranje između moćnih sposobnosti i etičkih principa, posebno u područjima privatnosti, sigurnosti i transparentnosti.
+    </p>
+  </div>
+</details>
+    </main>
+      <footer>
+        <div class="footer-sadrzaj">
+          <p>Klara Gotal &copy; 2025</p>
+          <div class="ai-ikone">
+            <a href="https://gemini.google.com/" target="_blank" title="Gemini">
+              <img src="./resursi/slike/GEMINI_3.png" alt="Gemini" class="ikona-podnozja">
+            </a>
+            <a href="https://chat.openai.com/" target="_blank" title="ChatGPT">
+              <img src="./resursi/slike/CHAT_GPT_2.png" alt="ChatGPT" class="ikona-podnozja">
+            </a>
+            <a href="https://claude.ai/" target="_blank" title="Claude">
+              <img src="./resursi/slike/CLAUDE_3.png" alt="Claude" class="ikona-podnozja">
+            </a>
+          </div>
+      <a href="http://validator.w3.org/check?uri=https://spider.foi.hr/OWT/2025/zadaca_01/kgotal23/index.html">
+            <img
+              src="./resursi/slike/HTML_5_ikona.png"
+              class="slika-html"
+              alt="HTML"
+            />
+          </a>          
+      </div>
+      </footer>
+</body>
+</html>
